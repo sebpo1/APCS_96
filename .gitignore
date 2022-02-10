@@ -1,6 +1,5 @@
 .vscode/*
 .idea/*
-*.zip
 *.psd
 *.psb
 .DS_Store
