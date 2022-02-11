@@ -105,7 +105,7 @@ em {
 
 #carouselHeadline {
   top: 0px;
-  left: 0px;
+  left: -1px;
   width: 127px;
   height: auto;
   font-size: 21px;
@@ -116,40 +116,41 @@ em {
 }
 
 #carouselHeadline img {
-  width: 155px;
+  width: 156px;
   height: auto;
 }
 
 .productImage {
-  z-index: -1;
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  width: 298px;
-  height: 330px;
+  width: 260px;
+  height: 310px;
   position: absolute;
-  left: 0px;
   top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .productInfo {
-  /* display: inline-block; */
-  width: 42%;
-  height: 200px;
-  margin-top: 3px;
-  float: left;
   position: relative;
+  width: 100%;
+  height: 160px;
 }
 
 .productName {
-  letter-spacing: -0.009em;
+  position: absolute;
+  top: 0;
+  right: 3px;
+  width: 128px;
   line-height: 1.2;
-  font-size: 13px;
+  font-size: 17px;
   text-align: left;
-  width: 91px;
-  margin-top: 20px;
-  margin-left: 24px;
+  letter-spacing: -0.001em;
+  margin-top: 10px;
+  margin-left: 14.5px;
+  z-index: -1;
 }
 
 .nowText {
@@ -163,8 +164,9 @@ em {
 }
 
 .productPriceContainer {
+  position: absolute;
   height: auto;
-  width: 156px;
+  width: 155px;
 }
 
 .productSalePrice {
@@ -174,31 +176,35 @@ em {
 
 .productRetailPrice {
   color: #ffffff;
-  font-size: 49.5px;
+  font-size: 54px;
   font-weight: bold;
-  height: auto;
   text-align: center;
-  margin-top: 34px;
+  height: auto;
+  margin-top: 48px;
 }
 
 .productRetailPrice .dollar {
   font-size: 45%;
-  margin-left: -1px;
-  vertical-align: 68%;
+  margin-left: -2px;
+  vertical-align: 70%;
+}
+
+.threeDigit {
+  margin-top: 42px;
 }
 
 .threeDigit .dollar {
-  vertical-align: 51%;
+  vertical-align: 48%;
 }
 
 .productRetailPrice .cents {
-  font-size: 34%;
-  margin-left: 2px;
-  vertical-align: 100%;
+  font-size: 44%;
+  margin-left: 4px;
+  vertical-align: 72%;
 }
 
 .threeDigit .cents {
-  vertical-align: 147%;
+  vertical-align: 57%;
 }
 
 .smallDecimal {
@@ -213,7 +219,6 @@ em {
   background-color: #ffffff;
   border-radius: 9px;
   display: block;
-  /* padding: 2px 0; */
   font-size: 12px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -235,7 +240,6 @@ em {
   width: 48px;
   height: 48px;
   display: none !important;
-  /* display: inline-block; */
   margin-top: 190px;
   margin-left: -256px;
 }
@@ -249,10 +253,10 @@ em {
   font-size: 23px;
   font-weight: 900;
   color: #ffffff;
-  line-height: 33px;
+  line-height: 32px;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.45px;
+  letter-spacing: 0.55px;
   padding: 3px;
   bottom: 58px;
   left: 50%;
@@ -276,7 +280,6 @@ em {
 .productContainer {
   display: inline-block;
   position: relative;
-  /* left: 104px; */
 }
 
 .productContainer {
@@ -299,7 +302,7 @@ em {
 /* carousel navigation =========== */
 
 .nav {
-  top: 250px;
+  top: 292px;
   width: 25px;
   height: 17px;
   background-repeat: no-repeat;
@@ -310,11 +313,11 @@ em {
 }
 
 #navLeft {
-  left: 0px;
+  left: 1px;
 }
 
 #navRight {
-  left: 275px;
+  left: 274px;
   transform: rotate(180deg);
 }
 
@@ -349,19 +352,32 @@ em {
 @media not all and (min-resolution: 0.001dpcm) {
   @media {
     .productRetailPrice {
-      margin-top: 5px;
+      margin-top: 50px;
     }
     .nowText {
       margin: 19px 0px -10px -36px;
     }
     .productRetailPrice .dollar {
-      margin-left: -1px;
-      vertical-align: 61%;
+      margin-left: 0px;
+      vertical-align: 70%;
+    }
+    .productRetailPrice .cents {
+      margin-left: 2px;
     }
     .cta,
     #cta {
       letter-spacing: 0.4px;
     }
+  }
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+  .macOSX .productRetailPrice {
+    margin-top: 51px;
+  }
+  .macOSX .productRetailPrice .dollar {
+    margin-left: -1px;
   }
 }
 /* DISCLAIMER */
@@ -377,6 +393,7 @@ em {
   left: -1px;
   right: 0;
   margin: auto;
+  font-family: "Gotham Medium";
 }
 
 #rollover_disclaimer img {
