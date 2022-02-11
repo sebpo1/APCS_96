@@ -14,7 +14,7 @@ FT.manifest({
         { "name": "carouselCTA", "type": "text", "default": "shop now" },
         { "name": "carouselCTAColour", "type": "text", "default": "#ec2927" },
 
-        { "name": "carouselHeadline", "type": "image", "default": "img/flag.png" },
+        { "name": "carouselHeadline", "type": "image", "default": "img/300x600_flag.png" },
 
         { "name": "segmentId", "type": "text", "default": "false" },
         { "name": "feedEndpoint", "type": "text", "default": "https://fm.flashtalking.com/feed/1572/trending/master?ftCreds=1&numItems=7" },
